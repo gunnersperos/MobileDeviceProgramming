@@ -13,6 +13,8 @@ Do you like music and simple phone games? You can have both in one with our app.
 ## Storyboard
 ![Screen1](https://user-images.githubusercontent.com/66223223/83367070-a3f36480-a380-11ea-8dd5-46250d6d8724.PNG)
 
+![Screen2](https://user-images.githubusercontent.com/66223223/83367076-abb30900-a380-11ea-8f75-2584ea69ef23.PNG)
+
 ## Functional Requirements
 - As a user interested in games and music
 -	I want a music clicker game
@@ -44,6 +46,9 @@ Do you like music and simple phone games? You can have both in one with our app.
 **Then** I should be able to buy more instruments 
 
 ## Class Diagram
+
+![class diagram](https://user-images.githubusercontent.com/66223223/83367084-b40b4400-a380-11ea-859b-513cbad70b03.png)
+
 
 ## Class Diagram Description
 
