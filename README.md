@@ -49,9 +49,12 @@ goes here
 
 
 ## Scrum Roles
-UI Specialist – Spencer Comyns
-Integration Specialist – David Stober
-Devops Specialist – Gunner Speros
+UI Specialist – Spencer Comyns  
+
+Integration Specialist – David Stober  
+
+Devops Specialist – Gunner Speros  
+
 
 
 
