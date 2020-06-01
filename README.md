@@ -11,7 +11,7 @@ Gunner Speros
 Do you like music and simple phone games? You can have both in one with our app. Tap on the instruments to earn tips from the crowd. As you earn more money, you can buy more instruments to allow you to earn even more tips.
 
 ## Storyboard
-goes here
+![Screen1](https://user-images.githubusercontent.com/66223223/83367070-a3f36480-a380-11ea-8dd5-46250d6d8724.PNG)
 
 ## Functional Requirements
 - As a user interested in games and music
