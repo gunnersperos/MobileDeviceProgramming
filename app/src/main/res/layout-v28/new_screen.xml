@@ -37,10 +37,25 @@
         tools:visibility="visible" >
 
         <Button
+            android:id="@+id/button6"
+            android:layout_width="127dp"
+            android:layout_height="match_parent"
+            android:text="Button"
+            android:translationX="285" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="127dp"
+            android:layout_height="match_parent"
+            android:text="Button"
+            tools:visibility="visible" />
+
+        <Button
             android:id="@+id/button2"
             android:layout_width="127dp"
             android:layout_height="match_parent"
-            android:text="Button" />
+            android:text="Button"
+            android:translationX="145" />
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>
