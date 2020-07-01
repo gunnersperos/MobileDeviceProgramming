@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/lblGuitar"
         style="@android:style/Widget.DeviceDefault.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.475" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/lblKick"
         style="@android:style/Widget.DeviceDefault.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.475" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/lblHihat"
         style="@android:style/Widget.DeviceDefault.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="0.298" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/lblSnare"
         style="@android:style/Widget.DeviceDefault.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,26 +71,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/lblSnare"
         app:layout_constraintVertical_bias="1.0"
         tools:visibility="visible">
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/btnStore"
             android:layout_width="127dp"
             android:layout_height="match_parent"
             android:text="Store"
             android:translationX="285" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnSettings"
             android:layout_width="127dp"
             android:layout_height="match_parent"
             android:text="Settings"
             tools:visibility="visible" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnPause"
             android:layout_width="127dp"
             android:layout_height="match_parent"
             android:text="Pause"
@@ -99,7 +99,7 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/lblScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score:"
@@ -114,7 +114,7 @@
         app:layout_constraintVertical_bias="0.071" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/lblBpm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BPM:"
@@ -125,4 +125,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:id="@+id/lblScorenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/scoreNum"
+        app:layout_constraintStart_toEndOf="@+id/lblScore"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblBpmnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/bpm_num"
+        app:layout_constraintStart_toEndOf="@+id/lblBpm"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
