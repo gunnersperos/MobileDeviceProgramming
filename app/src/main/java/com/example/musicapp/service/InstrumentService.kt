@@ -23,9 +23,7 @@ class InstrumentService {
 
             }
 
-
             override fun onResponse(
-
                 call: Call<ArrayList<Instrument>>,
                 response: Response<ArrayList<Instrument>>
             ) {
