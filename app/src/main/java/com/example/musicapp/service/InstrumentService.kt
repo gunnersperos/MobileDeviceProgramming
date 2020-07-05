@@ -11,7 +11,7 @@ import android.util.Log
 
 class InstrumentService {
 
-    fun fetchInstruments() : MutableLiveData<ArrayList<Instrument>>{
+    fun fetchInstruments(): MutableLiveData<ArrayList<Instrument>>{
         var _instruments = MutableLiveData<ArrayList<Instrument>>()
         val service = RetrofitClientInstance.retrofitInstance?.create(MusicAppDAO::class.java)
         val call = service?.getAllInstruments()
@@ -31,7 +31,7 @@ class InstrumentService {
             ) {
             _instruments.value = response.body()
                 print("hi")
-                print( response.body())
+                print(response.body())
             }
 
         })
