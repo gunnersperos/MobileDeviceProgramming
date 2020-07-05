@@ -11,7 +11,7 @@ import android.util.Log
 
 class InstrumentService {
 
-    fun fetchInstruments() : MutableLiveData<ArrayList<Instrument>>{
+    internal fun fetchInstruments() : MutableLiveData<ArrayList<Instrument>>{
         var _instruments = MutableLiveData<ArrayList<Instrument>>()
         val service = RetrofitClientInstance.retrofitInstance?.create(MusicAppDAO::class.java)
         val call = service?.getAllInstruments()
