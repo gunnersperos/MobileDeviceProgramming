@@ -7,7 +7,7 @@ import com.example.musicapp.service.InstrumentService
 
 class MainViewModel: ViewModel() {
     var instruments: MutableLiveData<ArrayList<Instrument>> = MutableLiveData<ArrayList<Instrument>>()
-    var instrumentService: InstrumentService = InstrumentService()
+    private var instrumentService: InstrumentService = InstrumentService()
 
     fun getAllInstruments(){
         instruments = instrumentService.fetchInstruments()
