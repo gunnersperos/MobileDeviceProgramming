@@ -10,8 +10,7 @@ class MainViewModel: ViewModel() {
     var instruments: MutableLiveData<ArrayList<Instrument>> = MutableLiveData<ArrayList<Instrument>>()
     var instrumentService: InstrumentService = InstrumentService()
 
-    fun getAllInstruments(){
+    internal fun getAllInstruments(){
         instruments = instrumentService.fetchInstruments()
-
     }
 }
