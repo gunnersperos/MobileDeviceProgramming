@@ -13,46 +13,32 @@ import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.rules.TestRule
 
-
-
 class InstrumentDataIntegrationTest {
 
     @get:Rule
-    var rule: TestRule =  InstantTaskExecutorRule()
-    lateinit var mvm:MainViewModel
-
+    var rule: TestRule = InstantTaskExecutorRule()
+    lateinit var mvm: MainViewModel
     var instrumentService = mockk<InstrumentService>()
 
-
     @Test
-    fun TestInstrumentListForResults() {
-
+    internal fun TestInstrumentListForResults() {
         givenAFeedOfInstrumentDataAreAvailable()
         getAllTheInstruments()
         checkIfInstrumentDataIsEmpty()
-
     }
 
     private fun givenAFeedOfInstrumentDataAreAvailable() {
-
         mvm = MainViewModel()
     }
 
     private fun getAllTheInstruments() {
-
         mvm.getAllInstruments()
-
-
-
     }
 
     private fun checkIfInstrumentDataIsEmpty() {
         mvm.instruments.observeForever {
             assertNotNull(it)
             assertEquals(4, it.size)
-
         }
-
     }
-
 }
