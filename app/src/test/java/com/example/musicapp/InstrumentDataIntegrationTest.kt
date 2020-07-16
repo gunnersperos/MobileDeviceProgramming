@@ -9,8 +9,6 @@ import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.rules.TestRule
 
-
-
 class InstrumentDataIntegrationTest {
     @get:Rule
     var rule: TestRule = InstantTaskExecutorRule()
@@ -18,7 +16,7 @@ class InstrumentDataIntegrationTest {
     var instrumentService = mockk<InstrumentService>()
 
     @Test
-    fun TestInstrumentListForResults() {
+    internal fun TestInstrumentListForResults() {
         givenAFeedOfInstrumentDataAreAvailable()
         getAllTheInstruments()
         checkIfInstrumentDataIsEmpty()

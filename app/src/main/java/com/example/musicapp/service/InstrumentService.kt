@@ -9,13 +9,15 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class InstrumentService {
-    internal fun fetchInstruments() : MutableLiveData<ArrayList<Instrument>>{
+    internal fun fetchInstruments(): MutableLiveData<ArrayList<Instrument>> {
         var _instruments = MutableLiveData<ArrayList<Instrument>>()
         val service = RetrofitClientInstance.retrofitInstance?.create(MusicAppDAO::class.java)
         val call = service?.getAllInstruments()
-        call?.enqueue(object: Callback<ArrayList<Instrument>>{
+        call?.enqueue(object : Callback<ArrayList<Instrument>> {
 
-            override fun onFailure(call: Call<ArrayList<Instrument>>, t: Throwable) {/*...*/}
+            override fun onFailure(call: Call<ArrayList<Instrument>>, t: Throwable) {
+                //log here
+            }
 
             override fun onResponse(
                 call: Call<ArrayList<Instrument>>,
