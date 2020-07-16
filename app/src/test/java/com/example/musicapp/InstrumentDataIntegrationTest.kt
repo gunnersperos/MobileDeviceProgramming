@@ -1,20 +1,15 @@
 package com.example.musicapp
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.example.musicapp.dto.Instrument
 import com.example.musicapp.service.InstrumentService
 import com.example.musicapp.ui.main.MainViewModel
-import io.mockk.confirmVerified
 import io.mockk.mockk
-import io.mockk.verify
 import org.junit.Test
-
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.rules.TestRule
 
 class InstrumentDataIntegrationTest {
-
     @get:Rule
     var rule: TestRule = InstantTaskExecutorRule()
     lateinit var mvm: MainViewModel
