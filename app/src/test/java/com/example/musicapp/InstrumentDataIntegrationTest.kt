@@ -31,9 +31,14 @@ class InstrumentDataIntegrationTest {
     }
 
     private fun checkIfInstrumentDataIsEmpty() {
+
         mvm.instruments.observeForever {
             assertNotNull(it)
+            print(it)
             assertEquals(4, it.size)
         }
+
+
+
     }
 }
