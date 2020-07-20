@@ -1,14 +1,11 @@
 package com.example.musicapp.dto
 
-import com.google.gson.annotations.SerializedName
 
-data class Instrument(
-    @SerializedName("id")var id: Int,
-    @SerializedName("name") var name: String,
-    @SerializedName("type") var type: String
-){
-    //Represents an instrument
-    override fun toString(): String {
-        return name
+data class Instrument(var id: Int, var name: String, var type: String) {
+
+    override fun toString(): String{
+
+        return (id.toString() + " " + name + " " + type)
     }
+
 }
