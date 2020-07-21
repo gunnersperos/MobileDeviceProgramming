@@ -1,6 +1,6 @@
-package com.example.musicapp.dao
+package mobile.programming.musicapp.dao
 
-import com.example.musicapp.dto.Instrument
+import mobile.programming.musicapp.dto.Instrument
 import retrofit2.Call
 import retrofit2.http.GET
 

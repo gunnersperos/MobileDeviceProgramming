@@ -1,4 +1,4 @@
-package com.example.musicapp
+package mobile.programming.musicapp
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

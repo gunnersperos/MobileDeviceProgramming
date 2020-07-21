@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.example.musicapp"
+        applicationId "mobile.programming.musicapp"
         minSdkVersion 28
         targetSdkVersion 30
         versionCode 1
@@ -41,4 +42,5 @@ dependencies {
     androidTestImplementation 'androidx.arch.core:core-testing:2.0.0'
     testImplementation "io.mockk:mockk:1.9"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
 }
