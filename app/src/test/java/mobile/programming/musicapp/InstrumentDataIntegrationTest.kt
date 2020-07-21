@@ -1,9 +1,9 @@
-package com.example.musicapp
+package mobile.programming.musicapp
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.example.musicapp.dto.Instrument
-import com.example.musicapp.service.InstrumentService
-import com.example.musicapp.ui.main.MainViewModel
+import mobile.programming.musicapp.dto.Instrument
+import mobile.programming.musicapp.service.InstrumentService
+import mobile.programming.musicapp.ui.main.MainViewModel
 import io.mockk.mockk
 import org.junit.Test
 import org.junit.Assert.*
