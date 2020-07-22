@@ -26,3 +26,5 @@ FirebaseInstanceId.getInstance().instanceId
             Log.d(TAG, msg)
             Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
         })
+
+FirebaseMessaging.getInstance().isAutoInitEnabled = true
