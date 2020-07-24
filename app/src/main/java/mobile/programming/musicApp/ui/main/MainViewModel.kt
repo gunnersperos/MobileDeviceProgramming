@@ -1,4 +1,4 @@
-package mobile.programming.musicapp.ui.main
+package mobile.programming.musicApp.ui.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

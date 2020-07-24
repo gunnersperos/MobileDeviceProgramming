@@ -1,4 +1,4 @@
-package mobile.programming.musicapp
+package mobile.programming.musicApp
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import mobile.programming.musicapp.dto.Instrument
@@ -32,10 +32,10 @@ class InstrumentDataIntegrationTest {
     }
 
     private fun checkIfInstrumentDataIsEmpty() {
-        var instrumentlist = ArrayList<Instrument>()
+        var instrumentList = ArrayList<Instrument>()
         mvm.instruments.observeForever {
 
-            instrumentlist = it
+            instrumentList = it
         }
 
         Thread.sleep(5000)

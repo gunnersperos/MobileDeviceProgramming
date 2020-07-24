@@ -1,4 +1,4 @@
-package mobile.programming.musicapp
+package mobile.programming.musicApp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package mobile.programming.musicapp.service
+package mobile.programming.musicApp.service
 
 import androidx.lifecycle.MutableLiveData
 import mobile.programming.musicapp.RetrofitClientInstance
