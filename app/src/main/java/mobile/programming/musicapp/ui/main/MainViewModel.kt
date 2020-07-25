@@ -8,7 +8,7 @@ import mobile.programming.musicapp.service.InstrumentService
 class MainViewModel: ViewModel() {
 
     var instruments: MutableLiveData<ArrayList<Instrument>> = MutableLiveData<ArrayList<Instrument>>()
-    var instrumentService: InstrumentService =
+    private var instrumentService: InstrumentService =
         InstrumentService()
 
     internal fun getAllInstruments(){

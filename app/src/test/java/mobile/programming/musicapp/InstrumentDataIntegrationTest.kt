@@ -13,8 +13,8 @@ import org.junit.rules.TestRule
 class InstrumentDataIntegrationTest {
     @get:Rule
     var rule: TestRule = InstantTaskExecutorRule()
-    lateinit var mvm: MainViewModel
-    var instrumentService = mockk<InstrumentService>()
+    lateinit private var mvm: MainViewModel
+    private var instrumentService = mockk<InstrumentService>()
 
     @Test
     internal fun TestInstrumentListForResults() {

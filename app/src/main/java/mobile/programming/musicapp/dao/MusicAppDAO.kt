@@ -12,5 +12,4 @@ interface MusicAppDAO {
      */
     @GET("/b/JGH1")
     fun getAllInstruments(): Call<ArrayList<Instrument>>
-
 }
