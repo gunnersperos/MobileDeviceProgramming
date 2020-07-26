@@ -1,16 +1,16 @@
-package mobile.programming.musicapp.service
+package mobile.programming.musicApp.service
 
 import androidx.lifecycle.MutableLiveData
-import mobile.programming.musicapp.RetrofitClientInstance
-import mobile.programming.musicapp.dao.MusicAppDAO
-import mobile.programming.musicapp.dto.Instrument
+import mobile.programming.musicApp.RetrofitClientInstance
+import mobile.programming.musicApp.dao.MusicAppDAO
+import mobile.programming.musicApp.dto.Instrument
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class InstrumentService {
     internal fun fetchInstruments(): MutableLiveData<ArrayList<Instrument>> {
-        val _instruments = MutableLiveData<ArrayList<Instrument>>()
+        val instruments = MutableLiveData<ArrayList<Instrument>>()
         val service = RetrofitClientInstance.retrofitInstance?.create(
             MusicAppDAO::class.java)
         val call = service?.getAllInstruments()
@@ -24,11 +24,11 @@ class InstrumentService {
                 call: Call<ArrayList<Instrument>>,
                 response: Response<ArrayList<Instrument>>
             ){
-                _instruments.value = response.body()
+                instruments.value = response.body()
 
                 print(response.body())
             }
         })
-        return _instruments
+        return instruments
     }
 }

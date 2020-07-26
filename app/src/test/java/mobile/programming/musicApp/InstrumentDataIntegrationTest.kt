@@ -1,9 +1,9 @@
-package mobile.programming.musicapp
+package mobile.programming.musicApp
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import mobile.programming.musicapp.dto.Instrument
-import mobile.programming.musicapp.service.InstrumentService
-import mobile.programming.musicapp.ui.main.MainViewModel
+import mobile.programming.musicApp.dto.Instrument
+import mobile.programming.musicApp.service.InstrumentService
+import mobile.programming.musicApp.ui.main.MainViewModel
 import io.mockk.mockk
 import org.junit.Test
 import org.junit.Assert.*
@@ -32,14 +32,14 @@ class InstrumentDataIntegrationTest {
     }
 
     private fun checkIfInstrumentDataIsEmpty() {
-        var instrumentlist = ArrayList<Instrument>()
+        var instrumentList = ArrayList<Instrument>()
         mvm.instruments.observeForever {
 
-            instrumentlist = it
+            instrumentList = it
         }
 
         Thread.sleep(5000)
-        assertNotNull(instrumentlist)
-        assertTrue(instrumentlist.size > 0)
+        assertNotNull(instrumentList)
+        assertTrue(instrumentList.size > 0)
     }
 }

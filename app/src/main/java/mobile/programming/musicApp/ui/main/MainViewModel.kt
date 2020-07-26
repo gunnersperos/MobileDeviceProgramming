@@ -1,14 +1,14 @@
-package mobile.programming.musicapp.ui.main
+package mobile.programming.musicApp.ui.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import mobile.programming.musicapp.dto.Instrument
-import mobile.programming.musicapp.service.InstrumentService
+import mobile.programming.musicApp.dto.Instrument
+import mobile.programming.musicApp.service.InstrumentService
 
 class MainViewModel: ViewModel() {
 
     var instruments: MutableLiveData<ArrayList<Instrument>> = MutableLiveData<ArrayList<Instrument>>()
-    var instrumentService: InstrumentService =
+    private var instrumentService: InstrumentService =
         InstrumentService()
 
     internal fun getAllInstruments(){
