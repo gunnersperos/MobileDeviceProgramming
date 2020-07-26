@@ -37,7 +37,6 @@ class InstrumentDataIntegrationTest {
 
             instrumentlist = it
         }
-
         Thread.sleep(5000)
         assertNotNull(instrumentlist)
         assertTrue(instrumentlist.size > 0)
