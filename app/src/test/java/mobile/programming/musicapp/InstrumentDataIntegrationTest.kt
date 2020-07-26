@@ -32,13 +32,12 @@ class InstrumentDataIntegrationTest {
     }
 
     private fun checkIfInstrumentDataIsEmpty() {
-        var instrumentlist = ArrayList<Instrument>()
+        var instrumentList = ArrayList<Instrument>()
         mvm.instruments.observeForever {
-
-            instrumentlist = it
+            instrumentList = it
         }
         Thread.sleep(5000)
-        assertNotNull(instrumentlist)
-        assertTrue(instrumentlist.size > 0)
+        assertNotNull(instrumentList)
+        assertTrue(instrumentList.size > 0)
     }
 }
