@@ -1,4 +1,4 @@
-package mobile.programming.musicapp.service
+package mobile.programming.musicApp.service
 
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
