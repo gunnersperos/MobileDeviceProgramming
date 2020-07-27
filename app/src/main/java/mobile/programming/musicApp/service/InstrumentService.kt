@@ -1,9 +1,9 @@
-package mobile.programming.musicapp.service
+package mobile.programming.musicApp.service
 
 import androidx.lifecycle.MutableLiveData
-import mobile.programming.musicapp.RetrofitClientInstance
-import mobile.programming.musicapp.dao.MusicAppDAO
-import mobile.programming.musicapp.dto.Instrument
+import mobile.programming.musicApp.RetrofitClientInstance
+import mobile.programming.musicApp.dao.MusicAppDAO
+import mobile.programming.musicApp.dto.Instrument
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
