@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
                 // Get new Instance ID token
                 val token = task.result?.token
 
-                Log.d("hi", token.toString())
+                Log.d("token", token.toString())
                 Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
             })
     }
