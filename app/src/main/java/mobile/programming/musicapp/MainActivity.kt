@@ -36,16 +36,7 @@ class MainActivity : AppCompatActivity() {
                 mvm.saveToFirestore(list, userID)
                 mvm.LoadFromFirestore(userID)
                 //TODO update main UI buttons to reveal unlocked instruments on load
-
-
-
             })
-
-
-
-
-
-
     }
 }
 
