@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">MusicApp</string>
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="play_btn_txt">Play</string>
+    <string name="pause_btn_txt">Pause</string>
+    <string name="settings_btn_txt">Settings</string>
+    <string name="store_btn_txt">Store</string>
+    <string name="drum_btn_txt">Drums</string>
 </resources>

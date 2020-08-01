@@ -11,7 +11,7 @@
         android:layout_width="139dp"
         android:layout_height="89dp"
         android:layout_marginStart="5dp"
-        android:text="Pause"
+        android:text="@string/pause_btn_txt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnSettings" />
 
@@ -20,7 +20,7 @@
         android:layout_width="130dp"
         android:layout_height="89dp"
         android:layout_marginEnd="3dp"
-        android:text="Store"
+        android:text="@string/store_btn_txt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -52,7 +52,7 @@
         android:id="@+id/btnSettings"
         android:layout_width="131dp"
         android:layout_height="89dp"
-        android:text="Settings"
+        android:text="@string/settings_btn_txt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -64,7 +64,7 @@
         android:layout_marginTop="300dp"
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="294dp"
-        android:text="Drums"
+        android:text="@string/drum_btn_txt"
         app:layout_constraintBottom_toTopOf="@+id/btnPause"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
