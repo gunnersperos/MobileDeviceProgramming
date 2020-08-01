@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import mobile.programming.musicapp.dto.Instrument
+import mobile.programming.musicapp.dto.UserData
 import mobile.programming.musicapp.service.InstrumentService
 
 class MainViewModel: ViewModel() {
@@ -25,10 +26,11 @@ class MainViewModel: ViewModel() {
 
     }
 
-    fun saveToFirestore(unlockedInstrumentsList: ArrayList<String>,userID: String){
+    fun saveToFirestore(unlockedInstrumentsList: ArrayList<String>,money: Double,userID: String){
 
         val userData = hashMapOf(
-            "unlockedInstruments" to unlockedInstrumentsList
+            "unlockedInstruments" to unlockedInstrumentsList,
+            "money" to money
         )
 
         firestore.collection("users").document(userID)
@@ -38,12 +40,20 @@ class MainViewModel: ViewModel() {
 
     }
 
-    fun LoadFromFirestore(userID: String){
+    fun LoadFromFirestore(userID: String): UserData{
         val instrumentRef = firestore.collection("users").document(userID)
+        val userData = UserData(id = userID, money = 0.0, unlockedInstruments = ArrayList())
+
         instrumentRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
                     Log.d("firestore load", "DocumentSnapshot data: ${document.data}")
+
+
+                    userData.money = document.getDouble("money")!!
+                    userData.unlockedInstruments = (document.get("unlockedInstruments") as ArrayList<String>?)!!
+                    Log.d("firestore object convert", "Money: ${userData.id}, Money: ${userData.money}, unlocked list:  ${userData.unlockedInstruments}" )
+
                 } else {
                     Log.d("firestore load", "No such document")
                 }
@@ -51,6 +61,6 @@ class MainViewModel: ViewModel() {
             .addOnFailureListener { exception ->
                 Log.d("firestore load", "get failed with ", exception)
             }
-
+        return userData
     }
 }

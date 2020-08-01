@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.iid.FirebaseInstanceId
+import mobile.programming.musicapp.dto.UserData
 import mobile.programming.musicapp.ui.main.MainViewModel
 
 
@@ -30,11 +31,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
                 userID = token.toString()
 
-                //sample code for saving to firestore DB
+                //sample code for saving and getting user data for firestore DB
                 mvm = MainViewModel()
                 val list = arrayListOf("piano", "guitar", "drums")
-                mvm.saveToFirestore(list, userID)
-                mvm.LoadFromFirestore(userID)
+                val money = 50.5
+                mvm.saveToFirestore(list,money,userID)
+                var userData: UserData? = mvm.LoadFromFirestore(userID)
                 //TODO update main UI buttons to reveal unlocked instruments on load
             })
     }
