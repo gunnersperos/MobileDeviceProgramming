@@ -1,10 +1,10 @@
 package mobile.programming.musicapp
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.iid.FirebaseInstanceId
@@ -47,6 +47,27 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, StoreActivity::class.java)
             startActivity(intent)
         }
+
+        //play audio on instrument button clicks
+        val bassAudio: MediaPlayer = MediaPlayer.create(this, R.raw.bassline)
+        val playBass = findViewById<Button>(R.id.btnBass)
+        playBass.setOnClickListener {
+            bassAudio.start()
+        }
+
+        val drumsAudio: MediaPlayer = MediaPlayer.create(this, R.raw.drumloop)
+        val playDrums = findViewById<Button>(R.id.btnDrums)
+        playDrums.setOnClickListener {
+            drumsAudio.start()
+        }
+        val guitarAudio: MediaPlayer = MediaPlayer.create(this, R.raw.guitar)
+        val playGuitar = findViewById<Button>(R.id.btnGuitar)
+        playGuitar.setOnClickListener {
+            guitarAudio.start()
+        }
+
+
+
     }
 }
 
