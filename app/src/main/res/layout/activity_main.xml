@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnBass"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -37,7 +38,8 @@
         android:id="@+id/lblBpm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BPM:"
+        android:text="@string/BPM_lbl_txt"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.849"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -49,7 +51,8 @@
         android:id="@+id/lblScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score:"
+        android:text="@string/score_lbl_txt"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -74,14 +77,42 @@
         android:id="@+id/btnDrums"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
+        android:layout_marginStart="165dp"
         android:layout_marginTop="300dp"
-        android:layout_marginEnd="161dp"
+        android:layout_marginEnd="165dp"
         android:layout_marginBottom="294dp"
         android:text="@string/drum_btn_txt"
         app:layout_constraintBottom_toTopOf="@+id/btnPause"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="37dp"
+        android:text="@string/bass_btn_txt"
+        app:layout_constraintBottom_toTopOf="@+id/btnDrums"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGuitar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="178dp"
+        android:text="@string/guitar_btn_txt"
+        app:layout_constraintBottom_toTopOf="@+id/btnPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDrums" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

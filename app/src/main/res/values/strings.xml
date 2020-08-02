@@ -9,4 +9,8 @@
     <string name="store_btn_txt">Store</string>
     <string name="drum_btn_txt">Drums</string>
     <string name="score_lbl_txt">Score:</string>
+    <string name="guitar_btn_txt">Guitar</string>
+    <string name="bass_btn_txt">Bass</string>
+    <string name="BPM_lbl_txt">BPM</string>
+
 </resources>
