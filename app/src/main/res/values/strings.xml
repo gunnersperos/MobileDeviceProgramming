@@ -8,4 +8,5 @@
     <string name="settings_btn_txt">Settings</string>
     <string name="store_btn_txt">Store</string>
     <string name="drum_btn_txt">Drums</string>
+    <string name="score_lbl_txt">Score:</string>
 </resources>
