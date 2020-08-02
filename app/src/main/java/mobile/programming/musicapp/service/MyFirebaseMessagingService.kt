@@ -4,7 +4,7 @@ import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
-
+//Firebase messaging service for Notifications
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
 
