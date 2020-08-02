@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
                 val token = task.result?.token
 
                 Log.d("token", token.toString())
-                Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
                 userID = token.toString()
 
                 //sample code for saving, getting, or deleting user data in firestore DB
