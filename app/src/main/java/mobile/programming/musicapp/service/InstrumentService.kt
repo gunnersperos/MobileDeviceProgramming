@@ -12,7 +12,8 @@ class InstrumentService {
     internal fun fetchInstruments(): MutableLiveData<ArrayList<Instrument>> {
         val _instruments = MutableLiveData<ArrayList<Instrument>>()
         val service = RetrofitClientInstance.retrofitInstance?.create(
-            MusicAppDAO::class.java)
+            MusicAppDAO::class.java
+        )
         val call = service?.getAllInstruments()
         call?.enqueue(object : Callback<ArrayList<Instrument>> {
 
@@ -23,7 +24,7 @@ class InstrumentService {
             override fun onResponse(
                 call: Call<ArrayList<Instrument>>,
                 response: Response<ArrayList<Instrument>>
-            ){
+            ) {
                 _instruments.value = response.body()
 
                 print(response.body())

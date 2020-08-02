@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
                 userID = token.toString()
 
-                //sample code for saving and getting user data for firestore DB
+                //sample code for saving, getting, or deleting user data in firestore DB
                 mvm = MainViewModel()
                 val list = arrayListOf("piano", "guitar", "drums")
                 val money = 50.5
                 mvm.saveToFirestore(list,money,userID)
-                var userData: UserData? = mvm.LoadFromFirestore(userID)
-                //TODO update main UI buttons to reveal unlocked instruments on load
+                var userData: UserData? = mvm.loadFromFirestore(userID)
+                //TODO update main UI buttons to enable unlocked instruments on load
             })
     }
 }
