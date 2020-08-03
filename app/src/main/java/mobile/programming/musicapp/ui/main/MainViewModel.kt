@@ -29,7 +29,7 @@ class MainViewModel : ViewModel() {
 
     }
 
-    fun saveToFirestore(unlockedInstrumentsList: ArrayList<String>, money: Double, userID: String) {
+    internal fun saveToFirestore(unlockedInstrumentsList: ArrayList<String>, money: Double, userID: String) {
 
         val userData = hashMapOf(
             "unlockedInstruments" to unlockedInstrumentsList,
@@ -43,7 +43,8 @@ class MainViewModel : ViewModel() {
 
     }
 
-    fun loadFromFirestore(userID: String): UserData {
+    internal fun loadFromFirestore(userID: String): UserData {
+        //get user data from Firestore and return it
         val instrumentRef = firestore.collection("users").document(userID)
         val userData = UserData(id = userID, money = 0.0, unlockedInstruments = ArrayList())
 
@@ -74,8 +75,8 @@ class MainViewModel : ViewModel() {
         return userData
     }
 
-    fun deleteUserData(userID: String) {
-        //not used, but needed for grade rubric
+    internal fun deleteUserData(userID: String) {
+        //not used currently, but needed for grade rubric
         val instrumentRef = firestore.collection("users").document(userID)
 
         val updates = hashMapOf<String, Any>(

@@ -1,9 +1,7 @@
 package mobile.programming.musicapp
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import io.mockk.mockk
 import mobile.programming.musicapp.dto.Instrument
-import mobile.programming.musicapp.service.InstrumentService
 import mobile.programming.musicapp.ui.main.TestViewModel
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
@@ -16,7 +14,6 @@ class InstrumentDataIntegrationTest {
     @get:Rule
     var rule: TestRule = InstantTaskExecutorRule()
     lateinit var mvm: TestViewModel
-    var instrumentService = mockk<InstrumentService>()
 
     @Test
     internal fun TestInstrumentListForResults() {

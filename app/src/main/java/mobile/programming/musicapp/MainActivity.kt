@@ -8,15 +8,12 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.iid.FirebaseInstanceId
-import mobile.programming.musicapp.dto.UserData
-import mobile.programming.musicapp.ui.main.MainViewModel
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        lateinit var mvm: MainViewModel
         lateinit var userID: String
 
         FirebaseInstanceId.getInstance().instanceId
@@ -30,15 +27,16 @@ class MainActivity : AppCompatActivity() {
                 val token = task.result?.token
 
                 Log.d("token", token.toString())
-                userID = token.toString()
+                userID = token.toString()//token will be used as the user's unique identier in FireBase
 
-                //sample code for saving, getting, or deleting user data in firestore DB
+                /**sample code for saving, getting, or deleting user data in firestore DB
                 mvm = MainViewModel()
                 val list = arrayListOf("piano", "guitar", "drums")
                 val money = 50.5
                 mvm.saveToFirestore(list,money,userID)
                 var userData: UserData? = mvm.loadFromFirestore(userID)
-                //TODO update main UI buttons to enable unlocked instruments on load
+                mvm.deleteUserData(userID)
+                 */
             })
 
         // go to store screen
@@ -65,7 +63,6 @@ class MainActivity : AppCompatActivity() {
         playGuitar.setOnClickListener {
             guitarAudio.start()
         }
-
 
 
     }

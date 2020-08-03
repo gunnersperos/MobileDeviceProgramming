@@ -1,5 +1,6 @@
 package mobile.programming.musicapp.service
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import mobile.programming.musicapp.RetrofitClientInstance
 import mobile.programming.musicapp.dao.MusicAppDAO
@@ -18,7 +19,7 @@ class InstrumentService {
         call?.enqueue(object : Callback<ArrayList<Instrument>> {
 
             override fun onFailure(call: Call<ArrayList<Instrument>>, t: Throwable) {
-                //log here
+                Log.d("Fetch Instruments", "Failed to get instruments")
             }
 
             override fun onResponse(
